@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+.ImageDiv img{
+    width: 30px;
+    margin-right: 20px;
+}
+.ImageDiv div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+    cursor: pointer
+
+}
+.Images{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Images img{
+
+    width: 30px;
+    border-radius: 100%
+}
+.Images div{
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+.Small p{
+    display: none;
+    
+}
+.Small{
+    width: 5%;
+}
+.Small hr{
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid;
+}
+.container{
+    padding-left: 17%;
+    padding-right:3%;
+    padding-bottom: 20px ;
+    padding-top: 2%;
+    min-width: 100%;
+}
+.large-side{
+    padding-left: 6%;
+    
+}
+.large-side .gridd{
+    width: 93vw;
+}
+.gridd{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    row-gap: 30px;
+    column-gap: 10px
+}
+.video img{
+    width: 25px
+}
+.active{
+    position: relative;
+}
+.active::before{
+    content: "";
+    position: absolute;
+    bottom: -3%;
+    width: 100%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: red;
+}
+.ImageDiv div{
+    cursor: pointer;
+    padding: 2px;
+}
+.Small .active::before{
+    content: "";
+    position: absolute;
+    bottom: -3%;
+    width: 50%;
+    margin-left: 2px;
+    height: 2px;
+    background-color: red;
+}
+@media (max-width:1166px){
+    .ImageDiv img{
+        margin-right: 5px;
+    }
+}
+@media (max-width:900px){
+    .container{
+        padding-left: 5%;
+        padding-right:2%;
+    }
+}
+@tailwind utilities;
